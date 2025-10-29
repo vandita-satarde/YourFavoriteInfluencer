@@ -19,7 +19,7 @@ function Sidebar() {
     <>
 
       {/* Mobile Toggle Button */}
-      <div className='md:hidden fixed z-10 flex justify-between items-center w-full p-6 bg-[#0E1836] text-[#F5F9FE] '>
+      <div className='md:hidden fixed z-10 flex justify-between items-center w-full p-6 bg-[#f38f8f] text-[#dffbec] '>
         <h1 className='text-[18px] font-bold '>Admin Panel</h1>
         <button onClick={toggleSidebar} >
           {isOpen ? <X size={24} /> : <Menu size={25} />}

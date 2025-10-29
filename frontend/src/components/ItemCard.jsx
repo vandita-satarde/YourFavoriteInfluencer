@@ -1,6 +1,6 @@
 const ItemCard = ({ title, image, description, link }) => {
   return (
-    <div className="bg-white rounded-lg shadow p-4 hover:border-[#ddacac] hover:border cursor-pointer ">
+    <div className="bg-pink-100 rounded-lg shadow p-4 hover:border-[#ddacac] hover:border cursor-pointer ">
       <img
         src={image}
         alt={title}
