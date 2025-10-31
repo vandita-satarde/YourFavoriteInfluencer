@@ -1,7 +1,7 @@
 import ShopItem from "../models/AddProductsModel.js";
 
 // Add new item (Admin)
-export const addShopItem = async (req, res) => {
+export const addProduct = async (req, res) => {
   try {
     const { title, description, link } = req.body;
     const image = req.file?.path; // if using Multer + Cloudinary
@@ -14,7 +14,7 @@ export const addShopItem = async (req, res) => {
 };
 
 // Get all items (Frontend)
-export const getShopItems = async (req, res) => {
+export const getProducts = async (req, res) => {
   try {
     const items = await ShopItem.find().sort({ createdAt: -1 });
     res.json(items);

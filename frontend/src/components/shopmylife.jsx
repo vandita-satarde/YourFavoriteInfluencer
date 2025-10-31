@@ -8,12 +8,16 @@ const ShopMyLife = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    // Fetch items from backend
-    axios
-      .get("http://localhost:5000/api/addproducts") // update URL if deployed
-      .then((res) => setItems(res.data))
-      .catch((err) => console.error("Error fetching items:", err));
-  }, []);
+  axios
+    .get("http://localhost:5000/api/addproducts") // Update this if you're deploying
+    .then((res) => {
+      console.log("Fetched items:", res);
+      setItems(res.data);
+    })
+    .catch((err) => {
+      console.error("Error fetching items:", err.response ? err.response.data : err.message);
+    });
+}, []);
 
   return (
     <>

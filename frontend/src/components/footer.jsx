@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-[#f98e8e] text-[#9a4141] pt-10"> 
       <div className=" mx-5 md:mx-16 lg:mx-50 flex justify-around ">
         
-        <div cl>
+        <div>
           <h2 className=" text-[13px] md:text-2xl lg:text-2xl font-bold ">CLARIE</h2>
           <p className="mt-3 text-[9px] md:text-sm lg:text-sm">Creating. Inspiring. Influencing.</p>
         </div>
