@@ -4,11 +4,13 @@ import cors from "cors";
 import dotenv from "dotenv";
 import AddProductsRoutes from "./routes/AddProductsRoutes.js";
 
+// Load environment variables first
+dotenv.config();
+
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/api/addproducts", AddProductsRoutes);
-dotenv.config();
 
 console.log("Loaded MONGO_URI:", process.env.MONGO_URI);
 

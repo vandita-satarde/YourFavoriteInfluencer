@@ -4,10 +4,12 @@ import { addProduct, getProducts } from "../controllers/AddProductsController.js
 
 const router = express.Router();
 
-// Multer setup (you can also use Cloudinary upload middleware)
-const upload = multer({ dest: "uploads/" });
+// Use memory storage so we can upload file buffer directly to Cloudinary
+const storage = multer.memoryStorage();
+const upload = multer({ storage });
 
-router.post("/add", addProduct);
+// POST /api/addproducts/add expects multipart/form-data with field `image`
+router.post("/add", upload.single("image"), addProduct);
 router.get("/", getProducts);
 
 export default router;
