@@ -9,7 +9,7 @@ const ShopMyLife = () => {
 
   useEffect(() => {
   axios
-    .get("http://localhost:5000/api/addproducts") // Update this if you're deploying
+    .get("https://your-favorite-influencer.vercel.app/api/addproducts") // Update this if you're deploying
     .then((res) => {
       console.log("Fetched items:", res);
       setItems(res.data);
