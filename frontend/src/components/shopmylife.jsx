@@ -9,7 +9,7 @@ const ShopMyLife = () => {
 
   useEffect(() => {
   axios
-    .get("https://your-favorite-influencer.vercel.app/api/addproducts") // Update this if you're deploying
+    .get("https://yourfavoriteinfluencer-backend.onrender.com/api/addproducts") // Update this if you're deploying
     .then((res) => {
       console.log("Fetched items:", res);
       setItems(res.data);

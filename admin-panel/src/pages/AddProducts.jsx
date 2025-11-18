@@ -18,7 +18,7 @@ function AddProducts() {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("https://your-favorite-influencer.vercel.app/api/addproducts");
+      const res = await axios.get("https://yourfavoriteinfluencer-backend.onrender.com/api/addproducts");
       setProducts(res.data);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -39,7 +39,7 @@ function AddProducts() {
     });
 
     try {
-      await axios.post("https://your-favorite-influencer.vercel.app/api/addproducts/add", data);
+      await axios.post("https://yourfavoriteinfluencer-backend.onrender.com/api/addproducts/add", data);
       alert("Item added successfully!");
       setFormData({ title: "", description: "", link: "", image: null }); // reset form
       fetchProducts(); // ✅ Refresh list
@@ -75,7 +75,7 @@ function AddProducts() {
     if (editFormData.image) data.append('image', editFormData.image);
 
     try {
-      await axios.put(`https://your-favorite-influencer.vercel.app/api/addproducts/${editingItem._id}`, data);
+      await axios.put(`https://yourfavoriteinfluencer-backend.onrender.com/api/addproducts/${editingItem._id}`, data);
       alert('Item updated');
       setEditingItem(null);
       fetchProducts();
@@ -88,7 +88,7 @@ function AddProducts() {
   const handleDelete = async (id) => {
     if (!confirm('Are you sure you want to delete this item?')) return;
     try {
-      await axios.delete(`https://your-favorite-influencer.vercel.app/api/addproducts/${id}`);
+      await axios.delete(`https://yourfavoriteinfluencer-backend.onrender.com/api/addproducts/${id}`);
       alert('Item deleted');
       fetchProducts();
     } catch (err) {

@@ -15,7 +15,7 @@ const Newsletter = () => {
     }
 
     try{
-      const res = await axios.post("https://your-favorite-influencer.vercel.app/subscribe", {email})
+      const res = await axios.post("https://yourfavoriteinfluencer-backend.onrender.com/subscribe", {email})
       setMessage(res.data.message);
       setEmail("");
     } catch(err) {
